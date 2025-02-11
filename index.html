@@ -26,10 +26,14 @@
         html.lt-ie-10 .ie-panel {
             display: block;
         }
+       
+  
+
     </style>
 </head>
 
 <body>
+
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
                 src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
@@ -69,7 +73,7 @@
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#features">Features</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#gallery">Fotos</a> </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Contacto</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">Solicita prespuesto</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -120,7 +124,7 @@
                                     height="520"> </div>
                             <div class="item"><img src="images/camion.jpg" alt="" width="720"
                                     height="520"> </div>
-                            <div class="item"><img src="images/mestas.jpg" alt="" width="720"
+                            <div class="item"><img src="images/foto_portada.jpg" alt="" width="720"
                                     height="520"> </div>
                         </div>
                     </div>
@@ -366,38 +370,40 @@
                 <div class="container">
                     <div class="row row-fix row-50 justify-content-center justify-content-lg-between">
                         <div class="col-lg-4 col-xl-3"> <a class="brand" href="index.html"><img class="brand-logo-dark"
-                                    src="images/logo-default-real-estate-396x66.png" alt="" width="198" height="33"><img
-                                    class="brand-logo-light" src="images/logo-inverse-real-estate-396x58.png" alt=""
+                                    src="images/logosfm.jpg" alt="" width="198" height="33"><img
+                                    class="brand-logo-light" src="images/logosfm.jpg" alt=""
                                     width="198" height="29"></a>
                             <div class="offset-custom-10">
-                                <h6 class="text-white">178 West 27th Street, Suite 527, New York NY 10012</h6>
+                                <h5 class="text-white">sfm@sfmlogistica.es</h5>
+                                <h5 class="text-white">924.......</h5>
                             </div>
                             <ul class="list-social list-social-4">
-                                <li><a class="link-social icon novi-icon fa-youtube-play" href="#"></a></li>
+                                
                                 <li><a class="link-social icon novi-icon fa-facebook-f" href="#"></a></li>
-                                <li><a class="link-social icon novi-icon fa-instagram" href="#"></a></li>
-                                <li><a class="link-social icon novi-icon fa-twitter" href="#"></a></li>
-                                <li><a class="link-social icon novi-icon fa-linkedin" href="#"></a></li>
+
                             </ul>
                             <p class="rights"><span>©&nbsp;</span><span
                                     class="copyright-year"></span><span>.&nbsp;</span><span>SFM Logistica SL
                                     </span><span>.&nbsp;</span><span>All Rights Reserved</span></p>
                         </div>
                         <div class="col-md-10 col-lg-6 col-xl-7">
-                            <h4>Contact us</h4>
-                            <form class="rd-form rd-mailform" data-form-output="form-output-global"
-                                data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                                <div class="form-wrap"> <input class="form-input" id="client-name" type="text"
-                                        name="name" data-constraints="@Required"> <label class="form-label"
-                                        for="client-name">Full name *</label> </div>
-                                <div class="form-wrap"> <input class="form-input" id="client-email" type="email"
-                                        name="email" data-constraints="@Email @Required"> <label class="form-label"
-                                        for="client-email">Email Address *</label> </div>
-                                <div class="form-wrap"> <textarea class="form-input" id="client-question"
-                                        name="question"></textarea> <label class="form-label"
-                                        for="client-question">Message *</label> </div> <button
-                                    class="button button-primary button-custom-1" type="submit">Submit</button>
+                            <h4>Solicita prespuesto</h4>
+                            <form id="contact-form" class="rd-form rd-mailform">
+                                <div class="form-wrap">
+                                    <input class="form-input" id="client-name" type="text" name="user_name" placeholder="Nombre completo *" required>
+                                    <label class="form-label" for="client-name">Nombre completo *</label>
+                                </div>
+                                <div class="form-wrap">
+                                    <input class="form-input" id="client-email" type="email" name="user_email" placeholder="Email *" required>
+                                    <label class="form-label" for="client-email">Email *</label>
+                                </div>
+                                <div class="form-wrap">
+                                    <textarea class="form-input" id="client-question" name="message" placeholder="Mensaje *" required></textarea>
+                                    <label class="form-label" for="client-question">Mensaje *</label>
+                                </div>
+                                <button class="button button-primary button-custom-1" type="submit">Enviar</button>
                             </form>
+                            
                         </div>
                     </div>
                 </div>
@@ -405,6 +411,24 @@
         </section>
         
     </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Inicializar EmailJS con tu User ID
+  emailjs.init("topNg38j9LTlBzeSQ"); // Reemplaza YOUR_USER_ID con tu User ID de EmailJS
+
+  // Manejar el envío del formulario
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita que el formulario recargue la página
+
+      // Enviar el formulario a través de EmailJS
+      emailjs.sendForm('sfm', 'template_ji5zawe', this)
+        .then(function() {
+            alert("¡Correo enviado con éxito!");
+        }, function(error) {
+            alert("Hubo un error al enviar el correo: " + JSON.stringify(error));
+        });
+  });
+</script>
     
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
