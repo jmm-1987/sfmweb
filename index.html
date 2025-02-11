@@ -26,6 +26,30 @@
         html.lt-ie-10 .ie-panel {
             display: block;
         }
+
+        .vehicle-animation {
+    position: relative;
+    width: 100%; /* Hace que el vehículo recorra todo el ancho */
+    overflow: hidden; /* Esconde cualquier parte de la imagen fuera del contenedor */
+    height: 150px; /* Ajusta la altura para que la imagen tenga espacio */
+}
+
+.vehicle-animation img {
+    position: absolute;
+    top: 0;
+    left: -300px; /* Comienza fuera de la pantalla a la izquierda */
+    animation: drive 5s linear forwards; /* Configura la animación para moverse continuamente */
+}
+
+@keyframes drive {
+    0% {
+        left: -300px; /* Inicio fuera de la pantalla */
+    }
+    100% {
+        left: calc(100% - 250px); /* Termina cerca del borde derecho de la pantalla */
+    }
+}
+
        
   
 
@@ -96,7 +120,11 @@
                                 <a href="construccion.html">
                                     <button class="button button-primary button-block" type="button">Acceso clientes</button>
                                 </a>
-                                
+                                <br>
+                        <!-- Imagen del vehículo -->
+                        <div class="vehicle-animation">
+                            <img src="images/furgun.png" alt="Vehículo circulando" width="310">
+                        </div>
                                         
             
                             </div>
