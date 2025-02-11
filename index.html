@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="page">
-        <header class="section page-header">
+        <header class="section page-header" style="position: relative; z-index: 3">
             <div class="rd-navbar-wrap">
                 <nav class="rd-navbar rd-navbar-5 novi-bg novi-bg-img" data-layout="rd-navbar-fixed"
                     data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed"
@@ -107,38 +107,45 @@
                 </nav>
             </div>
         </header>
-        <section class="section bg-default section-inset-26 text-center text-lg-left novi-bg novi-bg-img" id="home">
-            <div class="container">
-                <div
-                    class="row row-fix row-50 row-lg-60 align-items-center align-items-lg-start flex-column-reverse flex-lg-row">
-                    <div class="col-md-9 col-lg-5">
-                        <!--<h1 class="wow fadeInUp" data-wow-delay=".5s"></h1> <img src="images/furgun.png" class="wow fadeInUp" alt="" width="1000" height="1000" style="border-radius: 15px;"></h1>-->
-                        <div class="block-4 wow fadeInUp" data-wow-delay=".7s">
-                            <div class="box-border-top">
-                                <h3>Bienvenido a <br class="d-none d-xl-block"> nuestra web</h3>
-                           <br>
-                                <a href="construccion.html">
-                                    <button class="button button-primary button-block" type="button">Acceso clientes</button>
-                                </a>
-                                <br>
-                        <!-- Imagen del vehículo -->
+        <section class="section bg-default section-inset-26 text-center text-lg-left novi-bg novi-bg-img" id="home" 
+    style="background-image: url('images/fondo_portada.webp'); 
+           background-size: cover; 
+           background-position: center; 
+           background-repeat: no-repeat;">
+           <div style="position: absolute; 
+           top: 0; 
+           left: 0; 
+           width: 100%; 
+           height: 100%; 
+           background-color: rgba(255, 255, 255, 0.6); /* Color blanco con transparencia */
+           z-index: 0;"></div>
+    <div class="container">
+        <div
+            class="row row-fix row-50 row-lg-60 align-items-center align-items-lg-start flex-column-reverse flex-lg-row">
+            <div class="col-md-9 col-lg-5">
+                <div class="block-4 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="box-border-top">
+                        <h3>Bienvenido a <br class="d-none d-xl-block"> nuestra web</h3>
+                        <br>
+                        <a href="construccion.html">
+                            <button class="button button-primary button-block" type="button">Acceso clientes</button>
+                        </a>
+                        <br>
                         <div class="vehicle-animation">
                             <img src="images/furgun.png" alt="Vehículo circulando" width="310">
-                        </div>
-                                        
-            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-9 col-lg-7">
-                        <div class="box-caption context-dark wow fadeInUp" data-wow-delay=".9s"><img
-                                src="images/logosfm.png" alt="" width="1000" height="1000" style="border-radius: 15px;">
-                            
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="col-md-9 col-lg-7">
+                <div class="box-caption context-dark wow fadeInUp" data-wow-delay=".9s">
+                    <img src="images/logosfm.png" alt="" width="1000" height="1000" style="border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <section class="section">
             <hr>
         </section>
